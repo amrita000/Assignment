@@ -1,0 +1,588 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="Eflyer.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.2.3/js/bootstrap.min.js"></script>
+
+    <!-- Font Awesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet" />
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap" rel="stylesheet" />
+    <!-- MDB -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/6.2.0/mdb.min.css" rel="stylesheet" />
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+    <!-- Optional theme -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+</head>
+
+<body>
+    <div class="top">
+        <div class="container">
+            <div class="row">
+                <div class="col-12" id="header">
+                    <ul>
+                        <li><a href="#">Best Sellers</a></li>
+                        <li><a href="#">Gift Ideas</a></li>
+                        <li><a href="#">New Releases</a></li>
+                        <li><a href="#">Today's Deals</a></li>
+                        <li><a href="#">Customer Service</a></li>
+                    </ul>
+                </div>
+
+            </div>
+
+            <!--Logo-->
+            <div class="col-12" id="heading">
+                <h1>Eflyer</h1>
+            </div>
+        </div>
+
+        <!--- logo end-->
+
+
+        <div class="row">
+            <div class="navbar-section">
+                <div class="col-1" id="hamburger">
+                    <div id="mySidenav" class="sidenav">
+                        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+                        <a href="#">Home</a>
+                        <a href="#">Fashion</a>
+                        <a href="#">Electronic</a>
+                        <a href="#">Jewellary</a>
+                    </div>
+                    <span onclick="openNav()"><i class="fa-solid fa-bars"></i></span>
+                    <div id="main">
+                    </div>
+                </div>
+                <!--dropdown-start-->
+                <div class="col-2lg" id="menu-bar">
+                    <div class="dropdown">
+                        <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                All Category
+                            </button>
+                        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                            <a class="dropdown-item" href="#">Action</a>
+                            <a class="dropdown-item" href="#">Another action</a>
+                            <a class="dropdown-item" href="#">Something else here</a>
+                        </div>
+                    </div>
+                </div>
+                <!--dropdown-end-->
+
+                <!--search-box start-->
+                <div class="col-5lg" id="input-group">
+
+                    <div class="form-outline">
+                        <input type="search" placeholder="Search this blog" id="form1" class="form-control" />
+                        <label class="form-label" for="form1"></label>
+
+                        <button type="button" class="btn btn-primary">
+                                <i class="fas fa-search"></i>
+                            </button>
+
+                    </div>
+                </div>
+                <!--search-box end-->
+
+                <!--button img-box start-->
+                <div class="col-2lg" id="img-box">
+                    <a href="#" title="Language" class="nav-link" data-toggle="dropdown" aria-expanded="false">
+                        <img src="images/flag-uk.png" alt="flag" class="mr-2 " title="United Kingdom"> English
+                        <i class="fa fa-angle-down ml-2" aria-hidden="true"></i>
+                    </a>
+                    <div class="dropdown-menu" x-placement="bottom-start" style="position: absolute; transform: translate3d(922px, 200px, 0px); top: 0px; left: 0px; will-change: transform;">
+                        <a href="#" class="dropdown-item">
+                            <img src="images/flag-france.png" class="mr-2" alt="flag"> French
+                        </a>
+                    </div>
+                </div>
+                <!--button img-box end-->
+
+                <!--fonts start-->
+                <div class="col-2" id="fonts">
+
+                    <a href="#">
+                        <i class="fa fa-shopping-cart" aria-hidden="true"></i>
+                        <span class="padding_10">Cart</span></a>
+
+                    <a href="#">
+                        <i class="fa fa-user" aria-hidden="true"></i>
+                        <span class="padding_10">Cart</span></a>
+
+                </div>
+                <!--fonts end-->
+            </div>
+
+        </div>
+        <!--top-Slider-->
+        <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="false">
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+
+                    <div class="carousel-caption d-none d-md-block ">
+
+                        <h1 class="animate__animated animate__bounce">GET START<br> YOUR FAVRIOT SHOPING</h1>
+                        <div class="slide-btn animate__animated animate__bounce">
+                            <button class="btn btn-1">Buy Now</button>
+
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-item">
+
+                    <div class="carousel-caption d-none d-md-block">
+                        <h1 class="animate__animated animate__bounce">Get START<br> YOUR FAVOURITE SHOPPING</h1>
+                        <div class="slide-btn animate__animated animate__bounce">
+                            <button class="btn btn-1">Buy Now</button>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                </button>
+        </div>
+    </div>
+    </div>
+
+    <!-- first slider-->
+    <div class="heading1">
+        <h1>Man & Woman Fashion</h1>
+    </div>
+
+    <div id="testimonial-slider">
+        <div id="carouselExampleControls" class="carousel carousel-dark" data-bs-ride="carousel">
+            <div class="container-fluid">
+                <div class="testimonial-button">
+                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Previous</span>
+                        </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
+                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Next</span>
+                        </button>
+                </div>
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <div class="card">
+                            <h4 class="card-title">Man T-shirt</h4>
+                            <p class="card-text">Price $ 30</p>
+                            <div class="img-wrapper"><img src="./images/tshirt-img.png" class="d-block w-100" alt="..."> </div>
+                            <div class="card-body">
+                                <h6 class="card-text">Buy Now</h6>
+                                <p class="card-title">See More</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="card">
+                            <h4 class="card-title">Man-shirt</h4>
+                            <p class="card-text">Price $ 30</p>
+                            <div class="img-wrapper"><img src="./images/dress-shirt-img.png" class="d-block w-100" alt="..."> </div>
+                            <div class="card-body">
+                                <h6 class="card-text">Buy Now</h6>
+                                <p class="card-title">See More</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="card">
+                            <h4 class="card-title">Women Scart</h4>
+                            <p class="card-text">Price $ 30</p>
+                            <div class="img-wrapper"><img src="./images/women-clothes-img.png" class="d-block w-100" alt="..."> </div>
+                            <div class="card-body">
+                                <h6 class="card-text">Buy Now</h6>
+                                <p class="card-title">See More</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="card">
+                            <h4 class="card-title">Man T-shirt</h4>
+                            <p class="card-text">Price $ 30</p>
+                            <div class="img-wrapper"><img src="./images/tshirt-img.png" class="d-block w-100" alt="..."> </div>
+                            <div class="card-body">
+                                <h6 class="card-text">Buy Now</h6>
+                                <p class="card-title">See More</p>
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="card">
+                            <h4 class="card-title">Man-shirt</h4>
+                            <p class="card-text">Price $ 30</p>
+                            <div class="img-wrapper"><img src="./images/dress-shirt-img.png" class="d-block w-100" alt="..."> </div>
+                            <div class="card-body">
+                                <h6 class="card-text">Buy Now</h6>
+
+                                <p class="card-title">See More</p>
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="card">
+                            <h4 class="card-title">Women Scart</h4>
+                            <p class="card-text">Price $ 30</p>
+                            <div class="img-wrapper"><img src="./images/women-clothes-img.png" class="d-block w-100" alt="..."> </div>
+                            <div class="card-body">
+                                <h6 class="card-text">Buy Now</h6>
+                                <p class="card-title">See More</p>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!---End first slider-->
+
+    <!-- second slider-->
+    <div class="heading1">
+        <h1>ELECTRONIC</h1>
+    </div>
+    <div id="Middle-slider">
+        <div id="carouselExampleControls" class="carousel carousel-dark" data-bs-ride="carousel">
+            <div class="container-fluid">
+                <div class="testimonial-button">
+                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Previous</span>
+                        </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
+                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Next</span>
+                        </button>
+                </div>
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <div class="card">
+                            <h4 class="card-title">Laptop</h4>
+                            <p class="card-text">Start Price $ 100</p>
+                            <div class="img-wrapper"><img src="./images/laptop-img.png" class="d-block w-100" alt="..."> </div>
+                            <div class="card-body">
+                                <h6 class="card-text">Buy Now</h6>
+                                <p class="card-title">See More</p>
+
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="card">
+                            <h4 class="card-title">Mobile</h4>
+                            <p class="card-text">Start Price $ 100</p>
+                            <div class="img-wrapper"><img src="./images/mobile-img.png" class="d-block w-100" alt="..."> </div>
+                            <div class="card-body">
+                                <h6 class="card-text">Buy Now</h6>
+
+                                <p class="card-title">See More</p>
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="card">
+                            <h4 class="card-title">Computers</h4>
+                            <p class="card-text">Start Price $ 100</p>
+                            <div class="img-wrapper"><img src="./images/computer-img.png" class="d-block w-100" alt="..."> </div>
+                            <div class="card-body">
+                                <h6 class="card-text">Buy Now</h6>
+
+                                <p class="card-title">See More</p>
+
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="carousel-item">
+                        <div class="card">
+                            <h4 class="card-title">Laptop</h4>
+                            <p class="card-text">Start Price $ 100</p>
+                            <div class="img-wrapper"><img src="./images/laptop-img.png" class="d-block w-100" alt="..."> </div>
+                            <div class="card-body">
+                                <h6 class="card-text">Buy Now</h6>
+                                <p class="card-title">See More</p>
+
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="card">
+                            <h4 class="card-title">Mobile</h4>
+                            <p class="card-text">Start Price $ 100</p>
+                            <div class="img-wrapper"><img src="./images/mobile-img.png" class="d-block w-100" alt="..."> </div>
+                            <div class="card-body">
+                                <h6 class="card-text">Buy Now</h6>
+
+                                <p class="card-title">See More</p>
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="card">
+                            <h4 class="card-title">Computers</h4>
+                            <p class="card-text">Start Price $ 100</p>
+                            <div class="img-wrapper"><img src="./images/computer-img.png" class="d-block w-100" alt="..."> </div>
+                            <div class="card-body">
+                                <h6 class="card-text">Buy Now</h6>
+                                <p class="card-title">See More</p>
+
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="card">
+                            <h4 class="card-title">Laptop</h4>
+                            <p class="card-text">Start Price $ 100</p>
+                            <div class="img-wrapper"><img src="./images/laptop-img.png" class="d-block w-100" alt="..."> </div>
+                            <div class="card-body">
+                                <h6 class="card-text">Buy Now</h6>
+
+                                <p class="card-title">See More</p>
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="card">
+                            <h4 class="card-title">Mobile</h4>
+                            <p class="card-text">Start Price $ 100</p>
+                            <div class="img-wrapper"><img src="./images/mobile-img.png" class="d-block w-100" alt="..."> </div>
+                            <div class="card-body">
+                                <h6 class="card-text">Buy Now</h6>
+
+                                <p class="card-title">See More</p>
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="card">
+                            <h4 class="card-title">Computers</h4>
+                            <p class="card-text">Start Price $ 100</p>
+                            <div class="img-wrapper"><img src="./images/computer-img.png" class="d-block w-100" alt="..."> </div>
+                            <div class="card-body">
+                                <h6 class="card-text">Buy Now</h6>
+
+                                <p class="card-title">See More</p>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <!-- end second slider-->
+
+    <!-- third slider-->
+    <div class="heading1">
+        <h1>JEWELLARY</h1>
+    </div>
+    <div id="Last-slider">
+        <div id="carouselExampleControls" class="carousel carousel-dark" data-bs-ride="carousel">
+            <div class="container-fluid">
+                <div class="testimonial-button">
+                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Previous</span>
+                        </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
+                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Next</span>
+                        </button>
+                </div>
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <div class="card">
+                            <h4 class="card-title">Jumkas</h4>
+                            <p class="card-text">Start Price $ 100</p>
+                            <div class="img-wrapper"><img src="./images/jhumka-img.png" class="d-block w-100" alt="..."> </div>
+                            <div class="card-body">
+                                <h6 class="card-text">Buy Now</h6>
+                                <p class="card-title">See More</p>
+
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="card">
+                            <h4 class="card-title">Necklaces</h4>
+                            <p class="card-text">Start Price $ 100</p>
+                            <div class="img-wrapper"><img src="./images/neklesh-img.png" class="d-block w-100" alt="..."> </div>
+                            <div class="card-body">
+                                <h6 class="card-text">Buy Now</h6>
+
+                                <p class="card-title">See More</p>
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="card">
+                            <h4 class="card-title">Kangans</h4>
+                            <p class="card-text">Start Price $ 100</p>
+                            <div class="img-wrapper"><img src="./images/kangan-img.png" class="d-block w-100" alt="..."> </div>
+                            <div class="card-body">
+                                <h6 class="card-text">Buy Now</h6>
+
+                                <p class="card-title">See More</p>
+
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="carousel-item">
+                        <div class="card">
+                            <h4 class="card-title">Jumkas</h4>
+                            <p class="card-text">Start Price $ 100</p>
+                            <div class="img-wrapper"><img src="./images/jhumka-img.png" class="d-block w-100" alt="..."> </div>
+                            <div class="card-body">
+                                <h6 class="card-text">Buy Now</h6>
+
+                                <p class="card-title">See More</p>
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="card">
+                            <h4 class="card-title">Necklaces</h4>
+                            <p class="card-text">Start Price $ 100</p>
+                            <div class="img-wrapper"><img src="./images/neklesh-img.png" class="d-block w-100" alt="..."> </div>
+                            <div class="card-body">
+                                <h6 class="card-text">Buy Now</h6>
+
+                                <p class="card-title">See More</p>
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="card">
+                            <h4 class="card-title">Kangans</h4>
+                            <p class="card-text">Start Price $ 100</p>
+                            <div class="img-wrapper"><img src="./images/kangan-img.png" class="d-block w-100" alt="..."> </div>
+                            <div class="card-body">
+                                <h6 class="card-text">Buy Now</h6>
+
+                                <p class="card-title">See More</p>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- third slider-end-->
+
+    <!---End third slider-->
+    <!--loader-start-->
+    <div class="loader_main">
+        <div class="loader"></div>
+    </div>
+    <!--loader-end-->
+
+    <!--footer-start-->
+    <div class="footer-section ">
+        <div class="footer ">
+            <h1>Eflyer</h1>
+            <div class="input_bt ">
+                <input type="text " class="mail_bt " placeholder="Your Email " name="Your Email " spellcheck="false " data-ms-editor="true ">
+                <span class="subscribe_bt " id="basic-addon2 "><a href="# ">Subscribe</a></span>
+            </div>
+
+            <div class="footer-menu ">
+
+                <span><a href="# ">Best Sellers</a></span>
+                <span><a href="# ">Gift Ideas</a></span>
+                <span><a href="# ">New Releases</a></span>
+                <span><a href="# ">Today's Deals</a></span>
+                <span><a href="# ">Customer Service</a></span>
+            </div>
+            <div class="num ">
+                <span> Help Line Number :+1 1800 1200 1200</span>
+            </div>
+
+            <div class="last ">
+                <span>© 2020 All Rights Reserved. Design by Free html Templates</span>
+            </div>
+        </div>
+    </div>
+    <!--footer-end-->
+
+    <script>
+        var multipleCardCarousel = document.querySelector("#carouselExampleControls");
+        if (window.matchMedia("(min-width: 576px)").matches) {
+            var carousel = new bootstrap.Carousel(multipleCardCarousel, {
+                interval: false
+            });
+            var carouselWidth = $(".carousel-inner")[0].scrollWidth;
+            var cardWidth = $(".carousel-item").width();
+            var scrollPosition = 0;
+            $("#carouselExampleControls .carousel-control-next").on("click", function() {
+                if (scrollPosition < carouselWidth - cardWidth * 3) {
+                    scrollPosition += cardWidth;
+                    $("#carouselExampleControls .carousel-inner").animate({
+                            scrollLeft: scrollPosition
+                        },
+                        600
+                    );
+                }
+            });
+            $("#carouselExampleControls .carousel-control-prev").on("click", function() {
+                if (scrollPosition > 0) {
+                    scrollPosition -= cardWidth;
+                    $("#carouselExampleControls .carousel-inner").animate({
+                            scrollLeft: scrollPosition
+                        },
+                        600
+                    );
+                }
+            });
+        } else {
+            $(multipleCardCarousel).addClass("slide");
+        }
+    </script>
+    <script>
+        function openNav() {
+            document.getElementById("mySidenav").style.width = "250px";
+        }
+
+        function closeNav() {
+            document.getElementById("mySidenav").style.width = "0";
+        }
+    </script>
+</body>
+
+</html>
